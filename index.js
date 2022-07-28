@@ -38,7 +38,7 @@ async function fetchDBData() {
     const rows = await new Promise(
         (resolve, reject) => 
             connection.execute('SELECT * FROM film LIMIT ? OFFSET ?', 
-                               [20, 0], 
+                               ['20', '0'], 
                                (err, res) => {
                                    if(err) reject(err);
                                    resolve(res)
